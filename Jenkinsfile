@@ -5,4 +5,6 @@ node('master') {
 stage('Build & Unit test'){
     bat 'mvn clean install' ;
 }
+stage('Deploy to Dev server')
+    bat 'mvn clean deploy'
 }
