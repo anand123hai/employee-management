@@ -5,6 +5,9 @@ node('master') {
 stage('Build & Unit test'){
     bat 'mvn clean install' ;
 }
-stage('Deploy to Dev server')
+stage('Deploy artifacts to Nexus') {
     bat 'mvn clean deploy'
+}
+stage('Pull artifacts from Nexus and deploy it to Tomcat(DEV)') {
+    bat 'mvn -U dependency:copy -Dartifact=com.jwt.spring:SpringMVCHibernateCRUD:1.0-SNAPSHOT:war'
 }
