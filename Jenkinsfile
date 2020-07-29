@@ -11,3 +11,4 @@ stage('Deploy artifacts to Nexus') {
 stage('Pull artifacts from Nexus and deploy it to Tomcat(DEV)') {
     bat 'mvn -U dependency:copy -Dartifact=com.jwt.spring:SpringMVCHibernateCRUD:1.0-SNAPSHOT:war'
 }
+}
