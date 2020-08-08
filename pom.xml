@@ -4,7 +4,7 @@
 	<groupId>com.jwt.spring</groupId>
 	<artifactId>SpringMVCHibernateCRUD</artifactId>
 	<packaging>war</packaging>
-	<version>1.0</version>
+	<version>1.1</version>
 	<name>SpringMVCHibernateCRUD Maven Webapp</name>
 	<!--<url>http://maven.apache.org</url>-->
        <!-- Specifying the Versions of Spring, Hiberante, MySQL etc -->
