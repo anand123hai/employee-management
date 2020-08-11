@@ -12,7 +12,7 @@ echo Waiting for 5 seconds
 ping 192.0.2.2 -n 1 -w 5000 > nul
 REM Deploying war file to Apache server...
 echo Deploying war file to Apache server
-copy "C:\Program Files (x86)\Jenkins\workspace\(Deploy) - DEV - Employee Management\target\dependency\SpringMVCHibernateCRUD-1.0.0-SNAPSHOT.war" "C:\Softwares\apache-tomcat-9.0.36-windows-x64\apache-tomcat-9.0.36\webapps\"
+copy "C:\Program Files (x86)\Jenkins\workspace\(Deploy) - DEV - Employee Management\target\dependency\employee-management-${release}.war" "C:\Softwares\apache-tomcat-9.0.36-windows-x64\apache-tomcat-9.0.36\webapps\"
 REM Starting Apache server...
 echo Starting Apache server...
 net start Tomcat9
@@ -24,3 +24,4 @@ net start MySQL80
 echo Waiting for 5 seconds for MySQL server to start
 ping 192.0.2.2 -n 1 -w 5000 > nul
 echo All servers started
+exit 0

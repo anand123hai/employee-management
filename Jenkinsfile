@@ -1,4 +1,3 @@
-
 properties([parameters([string(defaultValue: '1.0', description: '', name: 'release-version', trim: false)])])
 node('master') {
 	stage('Checkout from github') {
