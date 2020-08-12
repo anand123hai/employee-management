@@ -4,7 +4,7 @@
     <groupId>com.jwt.spring</groupId>
     <artifactId>employee-management</artifactId>
     <packaging>war</packaging>
-    <version>1.0.8-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>Employee Management Application</name>
     <!--<url>http://maven.apache.org</url>-->
     <!-- Specifying the Versions of Spring, Hiberante, MySQL etc -->
@@ -34,11 +34,11 @@
     </distributionManagement>
 
     <!-- download artifacts from this repo -->
-    <!--<repositories>
+    <repositories>
         <repository>
-            <id>maven-public</id>
-            <name>maven-public</name>
-            <url>http://localhost:8081/repository/maven-public/</url>
+            <id>maven-snapshots</id>
+            <name>maven-snapshots</name>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
@@ -48,22 +48,6 @@
                 <updatePolicy>always</updatePolicy>
             </snapshots>
         </repository>
-    </repositories>-->
-
-    <repositories>
-    <repository>
-    <id>maven-snapshots</id>
-    <name>maven-snapshots</name>
-    <url>http://localhost:8081/repository/maven-snapshots/</url>
-        <releases>
-            <enabled>true</enabled>
-            <updatePolicy>always</updatePolicy>
-        </releases>
-        <snapshots>
-            <enabled>true</enabled>
-            <updatePolicy>always</updatePolicy>
-        </snapshots>
-    </repository>
     </repositories>
 
     <!-- download plugins from this repo -->
