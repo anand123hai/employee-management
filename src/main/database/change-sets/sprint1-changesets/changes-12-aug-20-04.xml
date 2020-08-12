@@ -1,0 +1,13 @@
+<databaseChangeLog xmlns='http://www.liquibase.org/xml/ns/dbchangelog'
+                   xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+                   xsi:schemaLocation='http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd'>
+       <changeSet id="anand-id-001" author="anand">
+        <sql>
+            INSERT INTO EMP_TBL VALUES(31,'Momo4','momo@gmail.com','tejas residency',11223,NOW(),1234567890);
+        </sql>
+        <rollback>
+            DELETE FROM EMP_TBL WHERE ID=31;
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
