@@ -4,7 +4,7 @@
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd'>
     <changeSet id="anand-id-001" author="anand">
         <sql>
-            INSERT INTO EMP_TBL VALUES(27,'Momo','momo@gmail.com','tejas residency',11223,1234567890,NOW());
+            INSERT INTO EMP_TBL VALUES(27,'Momo','momo@gmail.com','tejas residency',11223,NOW(),1234567890);
         </sql>
         <rollback>
             DELETE FROM EMP_TBL WHERE ID=27;

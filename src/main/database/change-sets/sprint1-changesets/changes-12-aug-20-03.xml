@@ -4,9 +4,9 @@
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd'>
     <changeSet id="anand-id-001" author="anand">
         <sql>
-            INSERT INTO EMP_TBL VALUES(28,'Momo1','momo@gmail.com','tejas residency',11223,1234567890,NOW());
-            INSERT INTO EMP_TBL VALUES(29,'Momo2','momo@gmail.com','tejas residency',11223,1234567890,NOW());
-            INSERT INTO EMP_TBL VALUES(30,'Momo3','momo@gmail.com','tejas residency',11223,1234567890,NOW());
+            INSERT INTO EMP_TBL VALUES(28,'Momo1','momo@gmail.com','tejas residency',11223,NOW(),1234567890);
+            INSERT INTO EMP_TBL VALUES(29,'Momo2','momo@gmail.com','tejas residency',11223,NOW(),1234567890);
+            INSERT INTO EMP_TBL VALUES(30,'Momo3','momo@gmail.com','tejas residency',11223,NOW(),1234567890);
         </sql>
         <rollback>
             DELETE FROM EMP_TBL WHERE ID=28;
