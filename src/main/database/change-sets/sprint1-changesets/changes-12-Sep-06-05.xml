@@ -2,12 +2,12 @@
                    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
                    xsi:schemaLocation='http://www.liquibase.org/xml/ns/dbchangelog
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd'>
-    <changeSet id="anand-id-001" author="anand">
+       <changeSet id="anand-id-001" author="anand">
         <sql>
-            INSERT INTO EMP_TBL VALUES(27,'Momo','momo@gmail.com','tejas residency',NOW(),1234567890,9876543210);
+            INSERT INTO EMP_TBL VALUES(32,'Momo5','momo@gmail.com','tejas residency',NOW(),1234567890,9876543210);
         </sql>
         <rollback>
-            DELETE FROM EMP_TBL WHERE ID=27;
+            DELETE FROM EMP_TBL WHERE ID=32;
         </rollback>
     </changeSet>
 </databaseChangeLog>
