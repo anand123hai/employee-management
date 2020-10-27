@@ -2,5 +2,5 @@
 This is a employee management system application
 Tools used -
 Jenkins - CI
-Apache Tomcat - Web server
+IBM Websphere Application Server - Web server
 MySQL - Database server
