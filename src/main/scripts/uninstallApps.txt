@@ -1,0 +1,8 @@
+#Stop application
+AdminControl.invoke('WebSphere:name=ApplicationManager,process=server1,platform=proxy,node=HPNode01,version=9.0.5.5,type=ApplicationManager,mbeanIdentifier=ApplicationManager,cell=HPNode01Cell,spec=1.0', 'stopApplication', '[employee-management_war]')
+
+#Uninstall application:
+AdminApp.uninstall('employee-management_war')
+
+#save
+AdminConfig.save();
