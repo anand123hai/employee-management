@@ -1,0 +1,9 @@
+---
+- hosts: node
+  become: true
+
+  tasks:
+    - name: create docker image using war file
+      command: docker build -t tt2-{{BUILD_NUMBER}} .
+      args:
+        chdir: /home/ansibleadmin/test-docker-mysql
