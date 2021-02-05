@@ -7,3 +7,9 @@
       command: docker build -t tt2-{{BUILD_NUMBER}} .
       args:
         chdir: /home/ansibleadmin/test-docker-mysql
+
+    - name: create tag to image
+      command: docker tag tt2-{{BUILD_NUMBER}} 192.168.0.7:8083/tt2-{{BUILD_NUMBER}}:1.0
+
+    - name: push image on to dockerhub
+      command: docker push 192.168.0.7:8083/tt2-{{BUILD_NUMBER}}:1.0
