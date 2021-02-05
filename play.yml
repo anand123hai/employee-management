@@ -14,5 +14,8 @@
     - name: docker login to nexus local repo
       command: docker login -u admin -p admin 192.168.0.7:8083
 
-    - name: push image on to dockerhub
+    - name: push image on to nexus local repo
       command: docker push 192.168.0.7:8083/tt2-{{BUILD_NUMBER}}:1.0
+
+    - name: run docker container from docker image
+      command: docker run -d -P --name tt2-{{BUILD_NUMBER}} 192.168.0.7:8083/tt2-{{BUILD_NUMBER}}:1.0
