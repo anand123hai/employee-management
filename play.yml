@@ -11,5 +11,8 @@
     - name: create tag to image
       command: docker tag tt2-{{BUILD_NUMBER}} 192.168.0.7:8083/tt2-{{BUILD_NUMBER}}:1.0
 
+    - name: docker login to nexus local repo
+      command: docker login -u admin -p admin 192.168.0.7:8083
+
     - name: push image on to dockerhub
       command: docker push 192.168.0.7:8083/tt2-{{BUILD_NUMBER}}:1.0
