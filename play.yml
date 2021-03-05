@@ -6,7 +6,7 @@
     - name: create docker image using war file
       command: docker build -t tt2-{{BUILD_NUMBER}} .
       args:
-        chdir: /home/ansibleadmin/test-docker-mysql
+        chdir: /home/sam/dev-deploy-sam/artifacts-{{BUILD_NUMBER}}
 
     - name: create tag to image
       command: docker tag tt2-{{BUILD_NUMBER}} 192.168.0.7:8083/tt2-{{BUILD_NUMBER}}:1.0
